@@ -1,0 +1,36 @@
+tickers:
+  - AAPL
+  - MSFT
+  - NVDA
+  - AMZN
+  - GOOGL
+  - META
+  - BRK-B
+  - LLY
+  - AVGO
+  - TSLA
+
+train_start: "2018-01-01"
+train_end: "2021-12-31"
+val_start: "2022-01-01"
+val_end: "2022-12-31"
+test_start: "2023-01-01"
+test_end: "2024-12-31"
+
+feature_windows: [5, 10, 20]
+baseline_threshold: 0.2
+lambda_cost: 0.001
+llm_backend: "api"
+
+xgboost:
+  max_depth: 5
+  n_estimators: 200
+  learning_rate: 0.05
+  subsample: 0.8
+
+ppo:
+  learning_rate: 3e-4
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  ent_coef: 0.01
