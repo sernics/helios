@@ -1,7 +1,9 @@
 .venv/
 data/raw/
+data/splits/*.parquet
 results/
 logs/
 __pycache__/
 *.pyc
 .env
+.env.development
